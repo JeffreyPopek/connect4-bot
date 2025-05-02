@@ -4,6 +4,11 @@
 #include <limits>
 #include <vector>
 
+/*
+ Credit to this blog: http://blog.gamesolver.org/
+ Helped me with implementation and understanding of minimax
+*/
+
 const int MAX_ROWS = 6;
 const int MAX_COLUMNS = 7;
 const int CELL_SIZE = 100;
@@ -135,7 +140,6 @@ int Minimax(int depth, bool max)
     }
 }
 
-// for ai
 int GetBestMove()
 {
     int bestScore = -9999;
@@ -303,7 +307,7 @@ int main()
                     DrawText("Player 1's Turn (Red)", 50, 10, 20, BLACK);
                     break;
                 case PLAYER2:
-                    DrawText("Player 2's Turn (AI - Yellow)", 50, 10, 20, BLACK);
+                    DrawText("AI's turn (yellow)", 50, 10, 20, BLACK);
                     break;
                 default:
                     break;
